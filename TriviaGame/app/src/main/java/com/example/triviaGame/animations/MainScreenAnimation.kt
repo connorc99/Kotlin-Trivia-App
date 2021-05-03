@@ -13,11 +13,11 @@ class MainScreenAnimation : AppCompatActivity() {
         setContentView(R.layout.activity_main_screen_animation)
         triviaSelect.alpha = 0f
         triviaSelect.animate().setDuration(1000).alpha(1f).withEndAction {
-            val intent = Intent(this, SelectGame::class.java)
-            startActivity(intent)
-            overridePendingTransition(android.R.anim.fade_in,
-                android.R.anim.fade_out)
-            finish()
+//            val intent = Intent(this, SelectGame::class.java)
+//            startActivity(intent)
+//            overridePendingTransition(android.R.anim.fade_in,
+//                android.R.anim.fade_out)
+//            finish()
         }
     }
 }

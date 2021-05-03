@@ -1,6 +1,5 @@
 package com.example.triviaGame.login
-import PlayerEntity
-import TriviaViewModel
+import com.example.triviaGame.viewmodels.TriviaViewModel
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -10,15 +9,15 @@ import android.widget.Toast
 import com.example.triviaGame.R
 import com.example.triviaGame.animations.LoginAnimation
 import com.example.triviaGame.animations.MainScreenAnimation
+import com.example.triviaGame.database.TriviaDatabase
+import com.example.triviaGame.entities.PlayerEntity
 
 class RegistrationActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_registration)
-        val dataSource = TriviaDatabase.getInstance(this)
-            .TriviaDao
-        val triviaViewModel = TriviaViewModel(dataSource, this
-            .application)
+        val dataSource = TriviaDatabase.getInstance(this).TriviaDao
+        val triviaViewModel = TriviaViewModel(dataSource, this.application)
         triviaViewModel.removeCurrentUser()
         val createAccount = findViewById<Button>(R.id.RegisterAccountButton)
         createAccount.setOnClickListener {

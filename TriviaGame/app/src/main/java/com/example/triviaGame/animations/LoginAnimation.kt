@@ -1,9 +1,9 @@
 package com.example.triviaGame.animations
-import MainActivity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.triviaGame.R
+import com.example.triviaGame.login.MainActivity
 import kotlinx.android.synthetic.main.activity_login_animation.*
 
 class LoginAnimation : AppCompatActivity() {

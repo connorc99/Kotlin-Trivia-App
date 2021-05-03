@@ -1,10 +1,12 @@
+package com.example.triviaGame.entities
+
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
 @Entity(tableName = "trivia_game")
 data class PlayerEntity(
-    @PrimaryKey(autoGenerate = true)
+    @PrimaryKey
     @ColumnInfo(name = "username")
     val username: String = "",
 

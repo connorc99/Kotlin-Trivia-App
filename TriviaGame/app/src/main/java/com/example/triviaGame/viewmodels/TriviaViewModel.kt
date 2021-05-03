@@ -1,6 +1,10 @@
+package com.example.triviaGame.viewmodels
+
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
+import com.example.triviaGame.dao.TriviaDao
+import com.example.triviaGame.entities.PlayerEntity
 import kotlinx.coroutines.launch
 
 class TriviaViewModel(

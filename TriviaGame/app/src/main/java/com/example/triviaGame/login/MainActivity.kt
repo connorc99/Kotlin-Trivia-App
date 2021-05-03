@@ -1,6 +1,5 @@
 package com.example.triviaGame.login
-import PlayerEntity
-import TriviaViewModel
+import com.example.triviaGame.entities.PlayerEntity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -10,6 +9,8 @@ import android.widget.Toast
 import com.example.triviaGame.R
 import com.example.triviaGame.animations.MainScreenAnimation
 import com.example.triviaGame.animations.StartupAnimation
+import com.example.triviaGame.database.TriviaDatabase
+import com.example.triviaGame.viewmodels.TriviaViewModel
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
