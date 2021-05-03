@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Tech Trivia</string>
+    <string name="login_button">Login</string>
+    <string name="Trivia_Title">Tech Trivia!</string>
+    <string name="name"/>
+    <string name="name_hint">Enter your username</string>
+    <string name="password_hint">Enter your password</string>
+    <string name="game_Title_Hint">Game Title</string>
+    <string name="create_account_button">Create Account</string>
+</resources>

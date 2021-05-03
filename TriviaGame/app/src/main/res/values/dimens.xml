@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="fontSize">16sp</dimen>
+    <dimen name="view_margin">16sp</dimen>
+    <dimen name="imagelayout_height">250dp</dimen>
+    <dimen name="starting_margin">50dp</dimen>
+    <dimen name="ending_margin">50dp</dimen>
+    <dimen name="start_paragraph_margin">16sp</dimen>
+    <dimen name="end_paragraph_margin">16sp</dimen>
+    <dimen name="grid_cell_image">293</dimen>
+    <dimen name="button_padding">20dp</dimen>
+    <dimen name="button_text_size">12sp</dimen>
+    <dimen name="no_margin">0dp</dimen>
+    <dimen name="button_margin">10dp</dimen>
+    <dimen name="small_font">10sp</dimen>
+</resources>
