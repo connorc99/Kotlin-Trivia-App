@@ -1,6 +1,13 @@
 import android.app.Application
+import android.util.Log
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
+<<<<<<< Updated upstream
+=======
+import com.example.triviaGame.dao.TriviaDao
+import com.example.triviaGame.database.GlobalUser
+import com.example.triviaGame.entities.PlayerEntity
+>>>>>>> Stashed changes
 import kotlinx.coroutines.launch
 
 class TriviaViewModel(
@@ -80,6 +87,23 @@ class TriviaViewModel(
         return false
     }
 
+    fun getAccount(username: String, password: String): PlayerEntity? {
+        var result = listOf<PlayerEntity>()
+        viewModelScope.launch {
+            result = getAllInDatabase()
+        }
+        if (result.isNotEmpty()) {
+            for (entry in result) {
+                if (entry.username.equals(username)
+                    && entry.password.equals(password))
+                    return entry
+            }
+        }
+
+        return null
+    }
+
+
     fun getCurrentUser(): PlayerEntity {
         var result = listOf(PlayerEntity())
         var user = PlayerEntity()
@@ -142,6 +166,30 @@ class TriviaViewModel(
             }
         }
     }
+
+    fun addHealthcareScore() {
+        var user = GlobalUser.user
+        user.healthScore = user.healthScore + 1
+        Log.d("HEALTHSCORE", "Adding is now ${user.healthScore} for user ${user.username}")
+        database.updateScores(user)
+    }
+
+
+    fun addFinanceScore() {
+        var user = GlobalUser.user
+        user.financialScore = user.financialScore + 1
+        Log.d("HEALTHSCORE", "Adding is now ${user.financialScore} for user ${user.username}")
+        database.updateScores(user)
+    }
+
+
+    fun addCSScore() {
+        var user = GlobalUser.user
+        user.securityScore = user.securityScore + 1
+        Log.d("HEALTHSCORE", "Adding is now ${user.securityScore} for user ${user.username}")
+        database.updateScores(user)
+    }
+
 
     private suspend fun deleteAllAccountsInDatabase(): Boolean {
         return database.clear() > 0

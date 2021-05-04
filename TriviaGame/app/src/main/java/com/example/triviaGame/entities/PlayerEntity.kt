@@ -12,13 +12,13 @@ data class PlayerEntity(
     val password: String = "",
 
     @ColumnInfo(name = "health_score")
-    val healthScore:Int = 0,
+    var healthScore:Int = 0,
 
     @ColumnInfo(name = "financial_score")
-    val financialScore:Int = 0,
+    var financialScore:Int = 0,
 
     @ColumnInfo(name = "security_score")
-    val securityScore:Int = 0,
+    var securityScore:Int = 0,
 
     @ColumnInfo(name = "current_account")
     var currentAccount:Boolean = false
