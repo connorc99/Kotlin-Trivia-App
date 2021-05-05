@@ -1,14 +1,11 @@
-package com.example.triviaGame.animations
-import MainActivity
+package com.example.triviaGame
+
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.triviaGame.R
-<<<<<<< Updated upstream
-=======
 import com.example.triviaGame.HomepageActivity
-import com.example.triviaGame.login.MainActivity
->>>>>>> Stashed changes
+import com.example.triviaGame.MainActivity
 import kotlinx.android.synthetic.main.activity_login_animation.*
 
 class LoginAnimation : AppCompatActivity() {

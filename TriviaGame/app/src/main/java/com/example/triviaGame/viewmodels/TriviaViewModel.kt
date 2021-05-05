@@ -1,13 +1,13 @@
+package com.example.triviaGame.database
+
 import android.app.Application
 import android.util.Log
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
-<<<<<<< Updated upstream
-=======
-import com.example.triviaGame.dao.TriviaDao
+
+import com.example.triviaGame.database.TriviaDao
 import com.example.triviaGame.database.GlobalUser
 import com.example.triviaGame.entities.PlayerEntity
->>>>>>> Stashed changes
 import kotlinx.coroutines.launch
 
 class TriviaViewModel(

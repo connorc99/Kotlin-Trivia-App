@@ -6,7 +6,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.triviaGame.R
 import com.example.triviaGame.database.TriviaDatabase
-import com.example.triviaGame.viewmodels.TriviaViewModel
+import com.example.triviaGame.database.TriviaViewModel
 import kotlinx.android.synthetic.main.activity_view_my_scores.*
 
 class ViewMyScoresActivity : AppCompatActivity() {

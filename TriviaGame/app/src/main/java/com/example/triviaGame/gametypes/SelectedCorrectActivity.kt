@@ -7,11 +7,11 @@ import android.os.Bundle
 import android.util.Log
 import com.example.triviaGame.MultipleChoiceActivity
 import com.example.triviaGame.R
-import com.example.triviaGame.dao.TriviaDao
+import com.example.triviaGame.database.TriviaDao
 import com.example.triviaGame.database.TriviaDatabase
 import com.example.triviaGame.sharedPreferences
 import com.example.triviaGame.themeKey
-import com.example.triviaGame.viewmodels.TriviaViewModel
+import com.example.triviaGame.database.TriviaViewModel
 import kotlinx.android.synthetic.main.activity_selected_correct.*
 
 class SelectedCorrectActivity : AppCompatActivity() {

@@ -1,10 +1,10 @@
 package com.example.triviaGame.animations
 
-import RegistrationActivity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.triviaGame.R
+import com.example.triviaGame.RegistrationActivity
 import kotlinx.android.synthetic.main.activity_startup_animation.*
 
 class StartupAnimation : AppCompatActivity() {

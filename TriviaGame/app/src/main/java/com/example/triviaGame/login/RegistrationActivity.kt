@@ -1,22 +1,21 @@
-package com.example.triviaGame.login
-import PlayerEntity
-import TriviaViewModel
+package com.example.triviaGame
+import com.example.triviaGame.entities.PlayerEntity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+
 import android.util.Log
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import com.example.triviaGame.R
-import com.example.triviaGame.animations.LoginAnimation
+import com.example.triviaGame.LoginAnimation
 import com.example.triviaGame.animations.MainScreenAnimation
-<<<<<<< Updated upstream
-=======
+
 import com.example.triviaGame.database.GlobalUser
 import com.example.triviaGame.database.TriviaDatabase
-import com.example.triviaGame.entities.PlayerEntity
->>>>>>> Stashed changes
+import com.example.triviaGame.database.TriviaViewModel
+
 
 class RegistrationActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -28,7 +27,6 @@ class RegistrationActivity : AppCompatActivity() {
             .application)
         triviaViewModel.removeCurrentUser()
         val createAccount = findViewById<Button>(R.id.RegisterAccountButton)
-        Log.d("ohhhhh", "ohhhhh")
         createAccount.setOnClickListener {
             val username = findViewById<EditText>(R.id.usernameTextViewCreateAccount)
             val password = findViewById<EditText>(R.id.passwordTextViewCreateAccount)

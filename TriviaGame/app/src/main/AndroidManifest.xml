@@ -14,8 +14,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
-
+        
         <activity
             android:name=".animations.NewColorAnimation"
             android:label="NewColorAnimation">
@@ -29,10 +28,6 @@
             android:name=".gametypes.SelectedWrongActivity"
             android:label="@string/title_activity_selected_wrong" />
         <activity android:name=".gametypes.SelectedCorrectActivity" />
-        <!--
-               Set to true if your app is Standalone, that is, it does not require the handheld
-               app to run.
-        -->
         <activity
             android:name=".HomepageActivity"
             android:label="@string/title_activity_homepage" />
@@ -46,7 +41,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".animations.LoginAnimation"
+            android:name=".LoginAnimation"
             android:theme="@style/SplashScreenTheme" />
         <activity
             android:name=".animations.MainScreenAnimation"
@@ -54,8 +49,8 @@
         <activity
             android:name=".animations.ScoresAnimation"
             android:theme="@style/SplashScreenTheme" />
-        <activity android:name=".login.RegistrationActivity" />
-        <activity android:name=".login.MainActivity" />
+        <activity android:name=".RegistrationActivity" />
+        <activity android:name=".MainActivity" />
         <activity
             android:name=".MultipleChoiceActivity" />
         <activity
