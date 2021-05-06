@@ -89,7 +89,7 @@ class MultipleChoiceActivity: AppCompatActivity() {
                 btnOptionOne.setOnClickListener {
                     val intent =
                         Intent(this.applicationContext, SelectedCorrectActivity::class.java)
-                    intent.putExtra("category", "Healthcare")
+                    intent.putExtra("category", category)
                     intent.putExtra("answer", correct_answer_string)
                     intent.putExtra("question", question_text)
                     startActivity(intent)

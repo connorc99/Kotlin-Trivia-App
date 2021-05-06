@@ -8,6 +8,7 @@ import androidx.lifecycle.viewModelScope
 import com.example.triviaGame.database.TriviaDao
 import com.example.triviaGame.database.GlobalUser
 import com.example.triviaGame.entities.PlayerEntity
+import com.example.triviaGame.homePage.LeaderboardEntry
 import kotlinx.coroutines.launch
 
 class TriviaViewModel(
@@ -168,7 +169,7 @@ class TriviaViewModel(
     }
 
     fun addHealthcareScore() {
-        var user = GlobalUser.user
+        var user = GlobalUser.user!!
         user.healthScore = user.healthScore + 1
         Log.d("HEALTHSCORE", "Adding is now ${user.healthScore} for user ${user.username}")
         database.updateScores(user)
@@ -176,7 +177,7 @@ class TriviaViewModel(
 
 
     fun addFinanceScore() {
-        var user = GlobalUser.user
+        var user = GlobalUser.user!!
         user.financialScore = user.financialScore + 1
         Log.d("HEALTHSCORE", "Adding is now ${user.financialScore} for user ${user.username}")
         database.updateScores(user)
@@ -184,10 +185,25 @@ class TriviaViewModel(
 
 
     fun addCSScore() {
-        var user = GlobalUser.user
+        var user = GlobalUser.user!!
         user.securityScore = user.securityScore + 1
         Log.d("HEALTHSCORE", "Adding is now ${user.securityScore} for user ${user.username}")
         database.updateScores(user)
+    }
+
+    fun get_cs_leaders(): List<LeaderboardEntry> {
+        var leaders = database.getCSScore()
+        return leaders
+    }
+
+    fun get_financial_leaders(): List<LeaderboardEntry> {
+        var leaders = database.getFinancesScore()
+        return leaders
+    }
+
+    fun get_healthcare_leaders(): List<LeaderboardEntry> {
+        var leaders = database.getHealthcareScore()
+        return leaders
     }
 
 

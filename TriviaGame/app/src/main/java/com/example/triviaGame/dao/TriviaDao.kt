@@ -9,6 +9,7 @@ import androidx.room.Query
 
 import androidx.room.*
 import com.example.triviaGame.entities.PlayerEntity
+import com.example.triviaGame.homePage.LeaderboardEntry
 
 
 @Dao
@@ -29,6 +30,14 @@ interface TriviaDao {
     @Update
     fun updateScores(account: PlayerEntity)
 
+    @Query("SELECT username, health_score AS score FROM TRIVIA_GAME ORDER BY security_score DESC LIMIT 5")
+    fun getHealthcareScore(): List<LeaderboardEntry>
+
+    @Query("SELECT username, financial_score AS score FROM TRIVIA_GAME ORDER BY financial_score DESC LIMIT 5")
+    fun getFinancesScore(): List<LeaderboardEntry>
+
+    @Query("SELECT username, security_score AS score FROM TRIVIA_GAME ORDER BY security_score DESC LIMIT 5")
+    fun getCSScore(): List<LeaderboardEntry>
 
 
 }

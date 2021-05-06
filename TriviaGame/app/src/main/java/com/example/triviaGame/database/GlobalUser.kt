@@ -4,6 +4,6 @@ import com.example.triviaGame.entities.PlayerEntity
 
 class GlobalUser {
     companion object {
-        lateinit var user: PlayerEntity
+        var user: PlayerEntity? = null
     }
 }

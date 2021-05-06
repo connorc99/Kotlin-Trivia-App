@@ -6,6 +6,7 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.triviaGame.R
+import com.example.triviaGame.database.GlobalUser
 import com.example.triviaGame.homePage.ViewLeaderboardActivity
 import kotlinx.android.synthetic.main.activity_homepage.*
 import kotlinx.android.synthetic.main.activity_main_screen_animation.*
@@ -58,6 +59,11 @@ class HomepageActivity : AppCompatActivity() {
         btnSettings.setOnClickListener {
             val intent = Intent(this.applicationContext, SettingsActivity::class.java)
             startActivity(intent)
+            finish()
+        }
+
+        btnLogout.setOnClickListener {
+            GlobalUser.user = null
             finish()
         }
 
